@@ -1,10 +1,13 @@
 
 
-const Total = props => {
-    const { parts } = props.parts;
+const Total = ({ course }) => {
+    const { parts } = course;
+
+    const total = parts.reduce((sum, x) => sum += x.exercises, 0);
+
     return (
         <div>
-            Number of exercises { parts[0].exercises + parts[1].exercises + parts[2].exercises }
+            Total of {total} exercises
         </div>
     );
 }

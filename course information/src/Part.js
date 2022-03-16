@@ -2,9 +2,9 @@
 
 const Part = ({ part, exercises }) => {
     return (
-        <div>
+        <li style={{listStyle: 'none'}}>
             <p>{ part } { exercises }</p>
-        </div>
+        </li>
     );
 }
 
